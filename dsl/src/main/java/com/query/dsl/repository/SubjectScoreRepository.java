@@ -5,5 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface SubjectScoreRepository extends JpaRepository<Score, Long> {
+public interface SubjectScoreRepository extends JpaRepository<Score, Long>, SubjectScoreCustom {
+    // subject custom interface 생성
 }

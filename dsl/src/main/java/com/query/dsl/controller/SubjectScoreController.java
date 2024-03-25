@@ -19,7 +19,7 @@ public class SubjectScoreController {
     private final SubjectScoreService service;
 
     @GetMapping("/score/{studentId}")
-    public ResponseEntity<List<SubjectScoreResponse>> getScoreByStudent(@PathVariable Long studentId) {
+    public ResponseEntity<List<SubjectScoreResponse>> getScoreByStudent(@PathVariable(value = "studentId") Long studentId) {
         List<SubjectScoreResponse> subjectScoreResponseList = service.findScoresByStudent(studentId);
         return ResponseEntity.ok(subjectScoreResponseList);
     }

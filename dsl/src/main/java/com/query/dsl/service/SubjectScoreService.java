@@ -16,7 +16,6 @@ public class SubjectScoreService {
     private final SubjectScoreRepository repository;
 
     public List<SubjectScoreResponse> findScoresByStudent(Long studentId) {
-//        return repository.findScoresByStudent(studentId);
-        return new ArrayList<>();
+        return repository.findScoresByStudent(studentId);
     }
 }
