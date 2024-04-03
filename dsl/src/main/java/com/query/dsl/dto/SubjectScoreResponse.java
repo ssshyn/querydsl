@@ -3,8 +3,6 @@ package com.query.dsl.dto;
 import lombok.*;
 
 @Data
-@Getter
-@Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
