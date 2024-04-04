@@ -25,4 +25,9 @@ public class PostController {
         postService.save(postRequest);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/{keyword}")
+    public ResponseEntity<List<PostResponse>> searchKeyword(@PathVariable(value = "keyword") String keyword) {
+        return ResponseEntity.ok(postService.searchKeyword(keyword));
+    }
 }

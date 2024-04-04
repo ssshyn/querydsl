@@ -21,6 +21,10 @@ public class PostService {
        return postRepository.findAll().stream().map(PostResponse::fromEntity).toList();
     }
 
+    public List<PostResponse> searchKeyword(String keyword) {
+        return postRepository.findByKeyword(keyword);
+    }
+
     public void save(PostRequest postRequest) {
         postRepository.save(
                 Post.builder()
@@ -29,7 +33,7 @@ public class PostService {
                         .imageUrl(postRequest.getImageUrl())
                         .price(postRequest.getPrice())
                         .createdAt(LocalDateTime.now())
-                        .createdBy("ttapp5")
+                        .createdBy("adcap")
                         .status(PostStatus.BEGIN)
                         .build()
         );
