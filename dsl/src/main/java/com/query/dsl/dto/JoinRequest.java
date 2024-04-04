@@ -1,24 +1,18 @@
-package com.query.dsl.entity;
+package com.query.dsl.dto;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Entity
 @Builder
-@AllArgsConstructor
 @NoArgsConstructor
-public class User {
-
-    @Id
+@AllArgsConstructor
+public class JoinRequest {
     private String userId;
     private String password;
-    private String email;
     private String name;
+    private String email;
     private String nickname;
-    private String profileImg;
 }
